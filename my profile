@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class profile {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         String firstname = scanner.nextLine();
+        System.out.println("Enter the Firstname:");
+       
+        String lastname = scanner.nextLine();
+        System.out.println("Enter the Lastname:");
+        
+         short  Sprno= scanner.nextShort();
+         System.out.println("Enter the  Sprno :");
+         
+          int age= scanner.nextInt();
+          System.out.println("Enter your  mobileno :");
+          
+           long mobileno= scanner.nextLong();
+          System.out.println("Enter your  mobileno :");
+          
+          char initial=scanner.nextLine().charAt(0);
+          System.out.println("Enter your  initial :");
+          
+          boolean  gender=scanner.nextBoolean();
+          System.out.println("Enter your  gender:");
+           float  weight=scanner.nextFloat();
+          System.out.println("Enter your  weight :");
+           double  height=scanner.nextDouble();
+          System.out.println("Enter your  height :");
+          
+        
+        System.out.println("Full Name: " + initial + ". " + firstname + " " + lastname);
+        System.out.println("SPr no: " + Sprno);
+        System.out.println("Age: " + age);
+        System.out.println("Mobile No: " + mobileno);
+        System.out.println("Gender (true=Male, false=Female): " + gender);
+        System.out.println("Weight: " + weight + " kg");
+         System.out.println("height: " + height + " kg");
+ 
+
+        scanner.close(); 
+    }
+}
