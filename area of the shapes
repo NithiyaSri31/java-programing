@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Area {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Choose shape to calculate area:");
         System.out.println("1. Circle");
@@ -10,37 +10,37 @@ public class Area {
         System.out.println("3. Square");
         System.out.println("4. Triangle");
         System.out.print("Enter your choice (1-4): ");
-        int choice = sc.nextInt();
+        int choice = scanner.nextInt();
 
         switch (choice) {
             case 1:
                 System.out.print("Enter radius of circle: ");
-                double radius = sc.nextDouble();
+                double radius = scanner.nextDouble();
                 double circleArea = Math.PI * radius * radius;
                 System.out.println("Area of Circle: " + circleArea);
                 break;
 
             case 2:
                 System.out.print("Enter length of rectangle: ");
-                double length = sc.nextDouble();
+                double length = scanner.nextDouble();
                 System.out.print("Enter breadth of rectangle: ");
-                double breadth = sc.nextDouble();
+                double breadth = scanner.nextDouble();
                 double rectangleArea = length * breadth;
                 System.out.println("Area of Rectangle: " + rectangleArea);
                 break;
 
             case 3:
                 System.out.print("Enter side of square: ");
-                double side = sc.nextDouble();
+                double side = scanner.nextDouble();
                 double squareArea = side * side;
                 System.out.println("Area of Square: " + squareArea);
                 break;
 
             case 4:
                 System.out.print("Enter base of triangle: ");
-                double base = sc.nextDouble();
+                double base = scanner.nextDouble();
                 System.out.print("Enter height of triangle: ");
-                double height = sc.nextDouble();
+                double height = scanner.nextDouble();
                 double triangleArea = 0.5 * base * height;
                 System.out.println("Area of Triangle: " + triangleArea);
                 break;
