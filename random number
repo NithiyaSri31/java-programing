@@ -1,0 +1,21 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter start num:");
+      int st=sc.nextInt();
+      System.out.println("Enter last num:");
+      int lt=sc.nextInt();
+      double rn=st+Math.random()*((st+lt)+1);
+      System.out.println(rn);
+    }
+}
+
+
+
+Enter start num:
+9
+Enter last num:
+4
+16.682700908416052
