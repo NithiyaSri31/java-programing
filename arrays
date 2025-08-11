@@ -245,6 +245,43 @@ The matrix is:
 2	1	
 
 
+////
+public class Main {
+    public static void main(String[] args) {
+        
+        int[][][] arr = {
+            { {11, 22, 33}, {44, 55, 66}, {77, 88, 99} }, 
+            { {103, 111, 127}, {139, 140, 156}, {165, 197, 180} }  
+        };
+
+        System.out.println("The matrix is:");
+
+        for (int[][] x: arr) { 
+            for (int[] y: x){
+                for (int item : y){
+            
+                    System.out.print(item + " ");
+                }
+                System.out.println();  
+            }                                       
+            System.out.println(); 
+        }
+    }
+} 
+
+
+output:
+The matrix is:
+11 22 33 
+44 55 66 
+77 88 99 
+
+103 111 127 
+139 140 156 
+165 197 180 
+
+
+
 
 
 
