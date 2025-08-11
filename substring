@@ -1,0 +1,50 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4};
+        int a = 1;
+        int b = 4;
+
+        int[] sub = new int[b - a];
+        for (int i = a; i < b; i++) {
+            sub[i - a] = arr[i];  
+        }
+
+        for (int num : sub) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+output:
+2 3 4 
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = {4, 5, 6};
+
+        int[] merged = new int[arr1.length + arr2.length];
+
+        
+        for (int i = 0; i < arr1.length; i++) {
+            merged[i] = arr1[i];
+        }
+
+                for (int i = 0; i < arr2.length; i++) {
+            merged[arr1.length + i] = arr2[i];
+        }
+
+       
+        for (int num : merged) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+output
+1 2 3 4 5 6 
+
