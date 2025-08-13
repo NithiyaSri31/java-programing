@@ -1,0 +1,47 @@
+where the focus was writing  step by step function this made it harder to manage and reuse code in large scale application 
+  java is build around oops which helps in organizing code using class and objects
+
+
+features of oops
+
+1.structures code into logical unit(class &object)
+2. keep related data and method together(Encapsulation)
+3. it makes code modular, reusable, scalable
+4.it prevents unauthorised access to the data
+5. it follow DRY(don't repeat yourself)
+
+
+types
+
+object
+encapsulation
+polymorphism
+inheritance
+abstraction
+class
+
+
+1. class
+ class is a user defined blueprint or protype from which objects are created .It represent setoff property or methods are common to all objects of contact
+  using class you can create multiple object within same behaviour instead of writing a code multiple times.
+
+                  *modifiers: a class can be public or have default access. (public)
+                  *class name: should be begin with initial letter capitalize.(main)
+                  *body:       body should be surrounded by braces.{}
+
+             class is an keyword
+
+
+
+2.object
+
+   object is a basic unit of object oriented programing that represent real life entities and defically java programing creates many objects which has you noo intract by methods. objects are what perform in your code they are the part of your code visibles to the user .
+        *state:     represent by attributes of an object it also reflect property of the object
+        *behaviour: reperesented by methods of a object it also reflect a response of object to another object
+        *identity: unique name given to an object that enables to intract with another object
+
+        *method : collection of statement that perform some specific task and return the result to the caller.
+
+                  
+
+     
