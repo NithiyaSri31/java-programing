@@ -1,0 +1,435 @@
+characterAt()
+codePointAt()= ASCII values
+codePointBefore()
+codePointCount()
+compareTo()
+compareTo Ignore Case()
+concat()
+contains()
+contentEquals()
+copyValueOf()
+endsWith()
+equals()
+equalsIgnore Case()
+formate()
+getBytes()
+getChars()
+hashCode()
+indexOf()
+isEmpty()
+join()
+lastIndexOff()
+length()
+matches()
+offsetByCodePoints()
+replace()
+regionMatches()
+replaceAll()
+replaceFirst()
+split()
+starts With()
+subSequence()
+subString()
+toChararray()
+toLowercase()
+toUppercase()
+toString()
+trim()
+valueOff()
+
+
+
+
+
+
+
+
+//
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String data = sc.nextLine();
+        System.out.print("Enter an index: ");
+        int index = sc.nextInt();
+        sc.nextLine();
+
+        
+            int unicodeValue = data.codePointAt(index);
+            char character = data.charAt(index);
+           int charBeforeindex = data.codePointBefore(index);
+           
+            System.out.println("Unicode value at index is " + index + " is: " + unicodeValue);
+            System.out.println("Character at index is " + index + " is: " + character);
+            
+            System.out.println("charBefore index is" + index + " is: " +charBeforeindex );
+        } 
+     
+    }
+output:
+
+
+Enter a string: nithi
+Enter an index: 4
+Unicode value at index is 4 is: 105
+Character at index is 4 is: i
+charBefore index is4 is: 104
+
+
+
+////
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String data = sc.nextLine();
+        int codeCount = data.codePointCount(0, 3);
+        System.out.println("Code point count is " + codeCount);
+
+        System.out.print("Enter second string : ");
+        String comparision = sc.nextLine();
+        int result = data.compareTo(comparision);
+        System.out.println("Comparison result is " + result);
+    }
+}
+
+        
+
+output:
+
+Enter a string: nithi
+Code point count is 3
+Enter second string : nithiii
+Comparison result is 2
+
+
+////
+
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first string: ");
+        String data = sc.nextLine();
+        
+
+        System.out.print("Enter second string : ");
+        String comparision = sc.nextLine();
+        int result = data.compareToIgnoreCase(comparision);
+        String result1 = data.concat(comparision);
+        
+        System.out.println("Comparison result is: " + result);
+        System.out.println("cancatenated string  is " + result1);
+    }
+    }
+
+output:
+
+Enter first string: nithiyasri
+Enter second string : dineshkumar
+Comparison result is: 20
+cancatenated string  is nithiyasridineshkumar
+
+=== Code Execution Successful ===
+
+
+////
+
+    import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first string: ");
+        String data = sc.nextLine();
+        
+        System.out.print("Enter second string: ");
+        String comparison = sc.nextLine();
+        
+        boolean result = data.contains(comparison);
+        boolean result1 = data.contentEquals(comparison);
+        
+        System.out.println("Contains result is: " + result);
+        System.out.println("Content equals result is: " + result1);
+      
+    }
+}
+
+output
+
+Enter first string: hello
+Enter second string: h
+Contains result is: true
+Content equals result is: false
+
+
+
+////
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first string: ");
+        String data = sc.nextLine();
+        System.out.print("Enter second string: ");
+        String comparison = sc.nextLine();
+        boolean result = data.endsWith("hello");
+        boolean result1 = data.equals(comparison);
+        String result2 = String.copyValueOf(data.toCharArray());
+        System.out.println("equals result is: " + result1);
+        System.out.println("ends with result is: " + result);
+        System.out.println("copy value of result is: " + result2);
+        
+    }
+}
+
+
+output:
+
+Enter first string: hello
+Enter second string: hii
+equals result is: false
+ends with result is: true
+copy value of result is: hello
+
+
+
+///
+
+
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first string: ");
+        String data = sc.nextLine();
+        System.out.print("Enter second string: ");
+        String comparison = sc.nextLine();
+        boolean equalsIgnoreCaseResult = data.equalsIgnoreCase(comparison);
+        
+        String result = String.format(" format result: %b", equalsIgnoreCaseResult);
+        System.out.println(result);
+         System.out.println("Ignore case result:" + equalsIgnoreCaseResult);
+    }
+}
+
+
+output:
+
+Enter first string: hii
+Enter second string: hello
+ format result: false
+Ignore case result:false
+
+
+
+////
+
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        char[] data = {'0','1','2','3','4','5','6','7','8','9'};
+        System.out.println(data);
+        
+        String mystring = "HelloWorld";
+        
+      
+        mystring.getChars(5, 10, data, 4);
+        
+        System.out.println(data);  
+    }
+}
+
+
+output:
+0123456789
+0123World9
+
+
+////
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        char[] data = {'9','1','8','6','4','5','6','7','8','9','0','7','2','1'};
+        System.out.println(data);
+        
+        String mystring = "logithasri";
+        
+      
+        mystring.getChars(0,10,data, 4);
+        
+        System.out.println(data);  
+    }
+}
+
+
+output:
+91864567890721
+9253nithiyasri
+
+///
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        char[] data = {'9','1','8','6','4','5','6','7','8','9','0','7','2','1'};
+        System.out.println(data);
+        
+        String name = "logithasri";
+        
+       byte[] x = name.getBytes();
+      
+      
+        
+        System.out.println(x[0]);  
+    }
+}
+
+ output:
+ 91864567890721
+108
+
+
+////
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        char[] data = {'9','1','8','6','4','5','6','7','8','9','0','7','2','1'};
+        System.out.println(data);
+        
+        String name = "logithasri";
+        
+       byte[] x = name.getBytes();
+      
+      
+        System.out.println(x[0]);
+        System.out.println(name.hashCode());  
+    }
+}
+
+ output:
+ 91864567890721
+108
+288642376
+
+
+///
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      
+        
+        String name = "logithasri";
+        
+        String name2="LOGITHASRI;
+      
+      
+       
+        System.out.println(name.toUpperCase());  
+         System.out.println(name.toLowerCase());  
+        
+        
+    }
+}
+
+ output:
+NITHIYASRI
+nithiyasri
+
+
+///
+
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      
+        
+        String name = "hello every one good morning";
+        
+        
+          System.out.println(name.indexOf("morning"));  
+           System.out.println(name.isEmpty());  
+          
+        
+        
+    }
+}
+
+output:
+21
+false
+
+///
+
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      
+        
+        String name =String.join(" ","hello", "every one", "good morning");
+        
+        
+         
+           System.out.println(name);  
+          
+        
+        
+        
+    }
+}
+
+ output:
+ hello every one good morning
+
+
+ ///
+
+ 
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+      
+        
+        String name =String.join(" ","hello", "every one", "good morning");
+        
+        
+         
+           System.out.println(name);  
+          
+        System.out.println(name.lastIndexOf("every one"));
+        
+        System.out.println(name.length());
+    }
+}
