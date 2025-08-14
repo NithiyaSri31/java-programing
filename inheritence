@@ -1,0 +1,461 @@
+inheritence is a fundamental concept in oops. It is a mechanishm in java  by which one class is allows to inherit the features (Fields and methods) of another class.
+ inhertence means creating new classes based on excisting once. A class that inherits from another class can reuse the methods and fields of that class.
+
+
+ parent class(base class): Cars
+
+ child class(sub class): audi,bmw,benz
+
+
+ ////
+
+ 
+  
+class cars{
+    void sound(){
+        System.out.println("cars makes a sound");
+        
+    }
+}
+
+
+class BMW extends cars{
+    void sound(){
+        System.out.println("bmw");
+    }
+}
+class Aadi extends cars{
+    void sound(){
+        System.out.println("Aadi");
+    }
+}
+class benz extends cars{
+    void sound(){
+        System.out.println("benz");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        
+    cars a;
+    
+    a=new BMW();
+    a.sound();
+    
+    a=new Aadi();
+    a.sound();
+    
+    a=new benz();
+    a.sound();
+    
+    
+        
+    }
+}
+
+
+
+output:
+
+bmw
+Aadi
+benz
+
+
+////
+
+
+class family {
+    void names() {
+        System.out.println("members name");
+    }
+}
+
+class father extends family {
+    String name;
+    father(String name) {
+        this.name = name;
+    }
+    void names() {
+        System.out.println(name);
+    }
+}
+
+class mother extends family {
+    String name;
+    mother(String name) {
+        this.name = name;
+    }
+    void names() {
+        System.out.println(name);
+    }
+}
+
+class sister extends family {
+    String name;
+    sister(String name) {
+        this.name = name;
+    }
+    void names() {
+        System.out.println(name);
+    }
+}
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("father name: ");
+        String fatherName = sc.nextLine();
+
+        System.out.print("mother name: ");
+        String motherName = sc.nextLine();
+
+        System.out.print("sister name: ");
+        String sisterName = sc.nextLine();
+
+        
+        family a;
+
+        a = new father(fatherName);
+        a.names();
+
+        a = new mother(motherName);
+        a.names();
+
+        a = new sister(sisterName);
+        a.names();
+
+        
+    }
+}
+
+
+output:
+
+father name: silaikannan
+mother name: dhanalakshmi
+sister name: dharshini
+silaikannan
+dhanalakshmi
+dharshini
+
+=== Code Execution Successful ===
+
+
+
+How inhertience works in java?
+  The extends keyword is used for inhertince in java it enables the subclass to inherit the fields and methods of the super class(parent class). 
+  when a class extends another class it means it inherits all the non primitive members of the parent class subclass can also override or add new functionality to that.
+
+
+    1.single = In single inheritence a sub class is derived from only one parent class.It inherits the properties and behaviour of a single parent class. also known as simple inheritence
+
+
+
+    ////
+
+
+    class cars{
+    void sound(){
+        System.out.println("cars makes a sound");
+        
+    }
+}
+
+
+class BMW extends cars{
+    void sound(){
+        System.out.println("bmw");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        
+    cars a;
+    
+    a=new BMW();
+    a.sound();
+    }
+}
+
+
+output:
+
+bmw
+
+example:
+
+import java.util.Scanner;
+class parents{
+    String name;
+    void sound(){
+        System.out.println("mom and dad");
+        
+    }
+}
+
+
+class daughter extends parents{
+    void sound(){
+        System.out.println("nithiya");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        
+       
+      
+    daughter daughter=new daughter();
+
+    
+        System.out.print("Enter daughter name: ");
+        daughter.name = sc.nextLine();
+
+    
+    
+        
+    }
+}
+
+
+output:
+Enter daughter name: nithi
+
+
+
+
+
+
+    2.multilevel: In multilevel inheritence is based on derived class will be inheriting a base class and as well as the derived class act as a the base class for another classes
+
+                        vechicle   =base1
+                          ||
+                          four wheeler  =base2
+                          ||
+                           Car      =derived class
+
+
+
+
+                           ////
+
+                           import java.util.Scanner;
+
+class Vehicle {
+    Vehicle() {
+        System.out.println("vehicle");
+    }
+}
+
+class FourWheeler extends Vehicle {
+    FourWheeler() {
+        System.out.println("this is a fourwheeler");
+    }
+}
+
+class Cars extends FourWheeler {
+    Cars() {
+        System.out.println("this is aadi");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Cars obj = new Cars();
+
+      
+    }
+}
+
+output:
+vehicle
+this is a fourwheeler
+this is aadi
+
+
+
+
+////
+import java.util.Scanner;
+
+class grandparents{
+    grandparents() {
+        System.out.println("thaatha");
+    }
+}
+
+class cousins extends grandparents{
+    cousins() {
+        System.out.println("cousin");
+    }
+}
+
+class  daughter  extends cousins{
+    daughter() {
+        System.out.println("this is nithiya");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        
+        daughter obj = new daughter();
+
+      
+    }
+}
+
+
+output:
+
+thaatha
+cousin
+this is nithiya
+
+
+
+
+
+
+
+
+     
+        
+    3.hierarichal = in hierarical inheritence more than one subclass is inherited from a single base class
+     
+                 ex:more than one derived class  is created from single base class.for example cars and buses both are vechicles
+
+
+
+                      vechicles
+                      /\/\
+                  buses  cars buses trucks
+
+
+
+
+                  ////
+
+                  
+class Vechical{
+    Vechical() {
+        System.out.println("This is a vechical");
+    }
+}
+
+class Car extends Vechical {
+    Car() {
+        System.out.println("This is a car");
+    }
+}
+
+class  Bus  extends Vechical{
+    Bus() {
+        System.out.println("this is a bus");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+         Car obj1= new Car();
+         Bus obj2 = new Bus();
+
+      
+    }
+}
+
+
+
+output:
+
+This is a vechical
+This is a car
+This is a vechical
+this is a bus
+
+
+
+
+
+    
+    4.multiple: in multiple inheritence can have more than one super class and inherit features from all super class
+
+
+                                  BMW        AUDI
+                                        \/
+                                      Cars
+
+
+                                      ///
+
+
+                                      interface Audi {
+    default void modelofAudi() {
+        
+        System.out.println("This is a modelof Audi");
+        
+        
+    }
+}
+
+
+
+interface BMW {
+                            
+     default void modelofBMW() {
+        
+        System.out.println("This is a modelof BMW");
+     }
+        
+}
+
+
+class Car implements Audi,BMW {
+    Car(){
+        
+        System.out.println("This is a Cars"); 
+    }
+}
+ 
+ public class Main {
+     public static void main(String[] args){
+         
+          Car obj = new Car();
+         obj. modelofAudi();
+          obj.modelofBMW();
+         
+     }
+ }   
+
+
+
+ output:
+
+
+ This is a Cars
+This is a modelof Audi
+This is a modelof BMW
+
+
+                                        
+    5.hybrid
+
+    
+
+
+    
+
+
+
+
+
+
+  
