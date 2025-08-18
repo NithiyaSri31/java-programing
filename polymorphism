@@ -1,0 +1,119 @@
+poly = many
+morphism = forms
+
+Types:
+compiletime  polynmorphism ( method overloading)= same method different parameter
+
+/////
+
+    
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double add(double a, double b, double c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        System.out.println(calculator.add(5, 4));
+        System.out.println(calculator.add(12.5, 9.4, 0.6));
+    }
+}
+
+
+output:
+
+9
+22.5
+
+ runtime polynmorphism(method overriding) 
+
+ /////
+ class Vehicle {
+    void drive() {  
+        System.out.println("driving vehicle");
+    }
+}
+
+class Bike extends Vehicle {
+    @Override
+    void drive() {
+        System.out.println("driving bike");
+    }
+}
+
+class Car extends Vehicle {
+    @Override
+    void drive() {
+        System.out.println("driving car");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Vehicle v = new Bike();   
+        v.drive();               
+
+        Vehicle a = new Car();    
+        a.drive();                
+
+        Vehicle b = new Vehicle();
+        b.drive();               
+    }
+
+
+    output:
+driving bike
+driving car
+driving vehicle
+
+
+////
+
+
+class Payment {
+    void drive() {  
+        System.out.println("payment method");
+    }
+}
+class Gpay extends Payment {
+    @Override
+    void drive() {
+        System.out.println("Google pay");
+    }
+}
+class Banktransfer extends Payment {
+    @Override
+    void drive() {
+        System.out.println("Bank transaction");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Payment v = new Gpay();   
+        v.drive();               
+        Payment a = new Banktransfer();    
+        a.drive();                
+        Payment b = new Payment();
+        b.drive();               
+    }
+}
+
+
+
+output:
+
+Google pay
+Bank transaction
+payment method
+
+
+
+
+
+
+    
+}
